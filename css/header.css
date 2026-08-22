@@ -1,0 +1,360 @@
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.72);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ========================================
+   HEADER CONTAINER
+======================================== */
+
+.header-container {
+    width: min(1400px, 92%);
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.logo-symbol {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #00f5ff;
+
+    font-size: 22px;
+
+    text-shadow:
+        0 0 8px rgba(0, 245, 255, 0.8),
+        0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+
+.logo-text {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+}
+
+
+.nav-link {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background: #00f5ff;
+
+    box-shadow:
+        0 0 8px rgba(0, 245, 255, 0.8);
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   HEADER ACTIONS
+======================================== */
+
+.header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   LANGUAGE
+======================================== */
+
+.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.language-btn {
+    padding: 5px 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.language-btn:hover,
+.language-btn.active {
+    color: #00f5ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 245, 255, 0.6);
+}
+
+
+.language-divider {
+    color: rgba(255, 255, 255, 0.2);
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   ORDER BUTTON
+======================================== */
+
+.header-order {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    color: #050505;
+
+    background: #00f5ff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    clip-path: polygon(
+        8px 0,
+        100% 0,
+        100% calc(100% - 8px),
+        calc(100% - 8px) 100%,
+        0 100%,
+        0 8px
+    );
+
+    box-shadow:
+        0 0 20px rgba(0, 245, 255, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.header-order:hover {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(0, 245, 255, 0.45);
+}
+
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.menu-toggle span {
+    width: 23px;
+    height: 2px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* ========================================
+   LANGUAGE SWITCHER
+======================================== */
+
+.language-switcher {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-right: 15px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.language-switcher span {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+
+.language-btn {
+    padding: 4px 2px;
+
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition:
+        color 0.25s ease,
+        text-shadow 0.25s ease;
+}
+
+
+.language-btn:hover {
+    color: #ffffff;
+}
+
+
+.language-btn.active {
+    color: #00f5ff;
+
+    text-shadow:
+        0 0 10px rgba(0, 245, 255, 0.5);
+}

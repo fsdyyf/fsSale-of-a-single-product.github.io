@@ -1,0 +1,266 @@
+/* ========================================
+   FAQ
+======================================== */
+
+.faq {
+    position: relative;
+
+    padding: 150px 0;
+
+    overflow: hidden;
+
+    background: #050505;
+}
+
+
+.faq-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1000px, 92%);
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.faq-heading {
+    margin-bottom: 70px;
+}
+
+
+/* ========================================
+   FAQ LIST
+======================================== */
+
+.faq-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================
+   ITEM
+======================================== */
+
+.faq-item {
+    position: relative;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.faq-item.active {
+    background: rgba(0, 245, 255, 0.025);
+}
+
+
+/* ========================================
+   QUESTION
+======================================== */
+
+.faq-question {
+    width: 100%;
+
+    min-height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    color: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.faq-question:hover {
+    color: #00f5ff;
+}
+
+
+.faq-question-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.faq-number {
+    color: rgba(255, 255, 255, 0.2);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.faq-item.active .faq-number {
+    color: #00f5ff;
+}
+
+
+/* ========================================
+   ICON
+======================================== */
+
+.faq-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: 18px;
+
+    transition:
+        transform 0.4s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.faq-item.active .faq-icon {
+    color: #050505;
+
+    background: #00f5ff;
+
+    border-color: #00f5ff;
+
+    transform: rotate(45deg);
+}
+
+
+/* ========================================
+   ANSWER
+======================================== */
+
+.faq-answer {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.4s ease;
+}
+
+
+.faq-answer p {
+    min-height: 0;
+
+    overflow: hidden;
+
+    max-width: 700px;
+
+    margin: 0;
+
+    padding: 0 25px 0 85px;
+
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    transition:
+        padding 0.4s ease;
+}
+
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+
+.faq-item.active .faq-answer p {
+    padding-bottom: 30px;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.faq-contact {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 55px;
+
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 11px;
+}
+
+
+.faq-contact a {
+    color: #00f5ff;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.faq-contact a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.faq-bg {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    left: -300px;
+    top: 25%;
+
+    border-radius: 50%;
+
+    background: rgba(138, 43, 226, 0.06);
+
+    filter: blur(120px);
+
+    pointer-events: none;
+}

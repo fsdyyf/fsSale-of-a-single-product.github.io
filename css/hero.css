@@ -1,0 +1,664 @@
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 140px 0 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(0, 245, 255, 0.07),
+            transparent 30%
+        ),
+        #050505;
+}
+
+
+/* ========================================
+   HERO CONTAINER
+======================================== */
+
+.hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1400px, 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+    position: relative;
+
+    z-index: 10;
+
+    max-width: 600px;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.hero-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #00f5ff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+.label-line {
+    width: 35px;
+    height: 2px;
+
+    background: #00f5ff;
+
+    box-shadow:
+        0 0 10px rgba(0, 245, 255, 0.8);
+}
+
+
+/* ========================================
+   TITLE
+======================================== */
+
+.hero-title {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.85;
+
+    margin-bottom: 35px;
+}
+
+
+.title-small {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: clamp(30px, 4vw, 58px);
+
+    font-weight: 300;
+
+    letter-spacing: 8px;
+}
+
+
+.title-main {
+    color: #ffffff;
+
+    font-size: clamp(80px, 11vw, 170px);
+
+    font-weight: 900;
+
+    letter-spacing: -7px;
+}
+
+
+.title-accent {
+    align-self: flex-end;
+
+    margin-right: 10%;
+
+    color: #00f5ff;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    text-shadow:
+        0 0 15px rgba(0, 245, 255, 0.4),
+        0 0 50px rgba(0, 245, 255, 0.15);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero-description {
+    max-width: 480px;
+
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-btn {
+    min-width: 160px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 25px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.hero-btn-primary {
+    color: #050505;
+
+    background: #00f5ff;
+
+    box-shadow:
+        0 0 25px rgba(0, 245, 255, 0.2);
+
+    clip-path: polygon(
+        10px 0,
+        100% 0,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        0 100%,
+        0 10px
+    );
+}
+
+
+.hero-btn-primary:hover {
+    background: #ffffff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 35px rgba(0, 245, 255, 0.4);
+}
+
+
+.hero-btn-secondary {
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+.hero-btn-secondary:hover {
+    border-color: #00f5ff;
+
+    color: #00f5ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* ========================================
+   PRICE
+======================================== */
+
+.hero-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 15px;
+}
+
+
+.price-label {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.price-value {
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+.price-old {
+    color: rgba(255, 255, 255, 0.25);
+
+    font-size: 15px;
+
+    text-decoration: line-through;
+}
+
+
+/* ========================================
+   PRODUCT AREA
+======================================== */
+
+.hero-product {
+    position: relative;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.product-image-wrapper {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(650px, 100%);
+
+    animation: productFloat 5s ease-in-out infinite;
+}
+
+
+.hero-product-image {
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 20px 45px rgba(0, 0, 0, 0.8))
+        drop-shadow(0 0 30px rgba(0, 245, 255, 0.12));
+}
+
+
+@keyframes productFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(1deg);
+    }
+
+}
+
+
+/* ========================================
+   PRODUCT GLOW
+======================================== */
+
+.product-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 245, 255, 0.12);
+
+    filter: blur(80px);
+
+    z-index: 1;
+}
+
+
+/* ========================================
+   ORBITS
+======================================== */
+
+.product-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(0, 245, 255, 0.12);
+
+    border-radius: 50%;
+
+    transform: rotate(-20deg);
+}
+
+
+.orbit-1 {
+    width: 550px;
+    height: 190px;
+
+    z-index: 2;
+
+    animation: orbitRotate 15s linear infinite;
+}
+
+
+.orbit-2 {
+    width: 470px;
+    height: 160px;
+
+    z-index: 2;
+
+    transform: rotate(25deg);
+
+    border-color: rgba(138, 43, 226, 0.12);
+
+    animation: orbitRotateReverse 18s linear infinite;
+}
+
+
+@keyframes orbitRotate {
+
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(340deg);
+    }
+
+}
+
+
+@keyframes orbitRotateReverse {
+
+    from {
+        transform: rotate(25deg);
+    }
+
+    to {
+        transform: rotate(-335deg);
+    }
+
+}
+
+
+/* ========================================
+   BADGE
+======================================== */
+
+.product-badge {
+    position: absolute;
+
+    right: 5%;
+    bottom: 15%;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 16px;
+
+    background: rgba(5, 5, 5, 0.75);
+
+    border: 1px solid rgba(0, 245, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.badge-number {
+    color: #00f5ff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+.badge-text {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ========================================
+   SPECS
+======================================== */
+
+.hero-specs {
+    position: absolute;
+
+    left: 50%;
+    bottom: 35px;
+
+    z-index: 20;
+
+    width: min(700px, 90%);
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.spec-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.spec-value {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.spec-label {
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.spec-divider {
+    width: 1px;
+    height: 25px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.hero-grid {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.18;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+}
+
+
+/* ========================================
+   GLOWS
+======================================== */
+
+.hero-glow {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+.hero-glow-1 {
+    width: 300px;
+    height: 300px;
+
+    top: 10%;
+    left: -150px;
+
+    background: rgba(0, 245, 255, 0.08);
+}
+
+
+.hero-glow-2 {
+    width: 300px;
+    height: 300px;
+
+    right: -150px;
+    bottom: 5%;
+
+    background: rgba(138, 43, 226, 0.08);
+}
+
+
+/* ========================================
+   SCROLL
+======================================== */
+
+.hero-scroll {
+    position: absolute;
+
+    right: 3%;
+    bottom: 45px;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.scroll-line {
+    width: 1px;
+    height: 45px;
+
+    background: linear-gradient(
+        to bottom,
+        #00f5ff,
+        transparent
+    );
+}
+
+
+.scroll-text {
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    writing-mode: vertical-rl;
+}
